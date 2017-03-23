@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		5FBB371D1E84825B001E416E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB371C1E84825B001E416E /* AppDelegate.swift */; };
-		5FBB371F1E84825B001E416E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB371E1E84825B001E416E /* ViewController.swift */; };
 		5FBB37221E84825B001E416E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FBB37201E84825B001E416E /* Main.storyboard */; };
 		5FBB37241E84825B001E416E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FBB37231E84825B001E416E /* Assets.xcassets */; };
 		5FBB37271E84825B001E416E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FBB37251E84825B001E416E /* LaunchScreen.storyboard */; };
+		5FBB372F1E848421001E416E /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB372E1E848421001E416E /* CanvasViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5FBB37191E84825B001E416E /* CanvasApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanvasApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FBB371C1E84825B001E416E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5FBB371E1E84825B001E416E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5FBB37211E84825B001E416E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5FBB37231E84825B001E416E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FBB37261E84825B001E416E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FBB37281E84825B001E416E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FBB372E1E848421001E416E /* CanvasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				5FBB371C1E84825B001E416E /* AppDelegate.swift */,
-				5FBB371E1E84825B001E416E /* ViewController.swift */,
+				5FBB372E1E848421001E416E /* CanvasViewController.swift */,
 				5FBB37201E84825B001E416E /* Main.storyboard */,
 				5FBB37231E84825B001E416E /* Assets.xcassets */,
 				5FBB37251E84825B001E416E /* LaunchScreen.storyboard */,
@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					5FBB37181E84825B001E416E = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 62P67T8LU2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FBB371F1E84825B001E416E /* ViewController.swift in Sources */,
+				5FBB372F1E848421001E416E /* CanvasViewController.swift in Sources */,
 				5FBB371D1E84825B001E416E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +259,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 62P67T8LU2;
 				INFOPLIST_FILE = CanvasApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fionathompson.CanvasApp;
@@ -270,6 +272,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 62P67T8LU2;
 				INFOPLIST_FILE = CanvasApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fionathompson.CanvasApp;
