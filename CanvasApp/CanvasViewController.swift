@@ -17,6 +17,8 @@ class CanvasViewController: UIViewController {
     var trayDownOffset: CGFloat!
     var trayUp: CGPoint!
     var trayDown: CGPoint!
+    var newlyCreatedFace: UIImageView!
+    var newlyCreatedFaceOriginalCenter: CGPoint!
     
     
     override func viewDidLoad() {
@@ -30,16 +32,14 @@ class CanvasViewController: UIViewController {
     }
     @IBAction func didPanTray(_ sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: view)
-        var velocity = sender.velocity(in: view)
+        let velocity = sender.velocity(in: view)
         
         if sender.state == .began {
             trayOriginalCenter = trayView.center
-            print("Gesture began")
             
             
         } else if sender.state == .changed {
             trayView.center = CGPoint(x: trayOriginalCenter.x, y: trayOriginalCenter.y + translation.y)
-            print("Gesture is changing")
             
             
         } else if sender.state == .ended {
@@ -55,13 +55,52 @@ class CanvasViewController: UIViewController {
                                 self.trayView.center = self.trayUp
                 }, completion: nil)
             }
-            print("Gesture ended")
         }
     
 
     }
 
     @IBAction func didPanFace(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: view)
+        
+        
+        if sender.state == .began {
+            var imageView = sender.view as! UIImageView
+            newlyCreatedFace = UIImageView(image: imageView.image)
+            view.addSubview(newlyCreatedFace)
+            newlyCreatedFace.center = imageView.center
+            newlyCreatedFace.center.y += trayView.frame.origin.y
+            newlyCreatedFaceOriginalCenter = newlyCreatedFace.center
+            
+            let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(didPanFaceOnPage(sender:)))
+            newlyCreatedFace.isUserInteractionEnabled = true
+            newlyCreatedFace.addGestureRecognizer(panGestureRecognizer)
+        } else if sender.state == .changed {
+            newlyCreatedFace.center = CGPoint(x: newlyCreatedFaceOriginalCenter.x + translation.x, y: newlyCreatedFaceOriginalCenter.y + translation.y)
+            
+        } else if sender.state == .ended {
+            
+        }
+        
+    }
+    
+    func didPanFaceOnPage(sender: UIPanGestureRecognizer) {
+        let location = sender.location(in: view)
+        let velocity = sender.velocity(in: view)
+        let translation = sender.translation(in: view)
+        
+        if sender.state == .began {
+            newlyCreatedFace = sender.view as! UIImageView
+            newlyCreatedFaceOriginalCenter = newlyCreatedFace.center
+            print("Gesture began")
+        } else if sender.state == .changed {
+            newlyCreatedFace.center = CGPoint(x: newlyCreatedFaceOriginalCenter.x + translation.x, y: newlyCreatedFaceOriginalCenter.y + translation.y)
+            print("Gesture is changing")
+        } else if sender.state == .ended {
+            print("Gesture ended")
+        }
+    }
+    @IBAction func didPinch(_ sender: UIPinchGestureRecognizer) {
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

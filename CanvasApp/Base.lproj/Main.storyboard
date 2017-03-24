@@ -105,12 +105,36 @@
                         <action selector="didPanTray:" destination="BYZ-38-t0r" id="rHq-B5-w8B"/>
                     </connections>
                 </panGestureRecognizer>
-                <pinchGestureRecognizer id="f8a-Xi-W8i"/>
-                <pinchGestureRecognizer id="iez-j9-Seh"/>
-                <pinchGestureRecognizer id="bva-fo-mJL"/>
-                <pinchGestureRecognizer id="773-aK-09o"/>
-                <pinchGestureRecognizer id="TJF-Cl-PJz"/>
-                <pinchGestureRecognizer id="nlk-Qr-teW"/>
+                <pinchGestureRecognizer id="f8a-Xi-W8i">
+                    <connections>
+                        <action selector="didPinch:" destination="BYZ-38-t0r" id="bJR-Pr-DSB"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="iez-j9-Seh">
+                    <connections>
+                        <action selector="didPinch:" destination="BYZ-38-t0r" id="9LL-nZ-wbK"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="bva-fo-mJL">
+                    <connections>
+                        <action selector="didPinch:" destination="BYZ-38-t0r" id="wdV-lF-Z0P"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="773-aK-09o">
+                    <connections>
+                        <action selector="didPinch:" destination="BYZ-38-t0r" id="Cke-u8-gSR"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="TJF-Cl-PJz">
+                    <connections>
+                        <action selector="didPinch:" destination="BYZ-38-t0r" id="n8s-Iv-FhM"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="nlk-Qr-teW">
+                    <connections>
+                        <action selector="didPinch:" destination="BYZ-38-t0r" id="ceD-AX-dmQ"/>
+                    </connections>
+                </pinchGestureRecognizer>
                 <rotationGestureRecognizer id="JbU-GY-TOL"/>
                 <rotationGestureRecognizer id="ete-Pq-Ugm"/>
                 <rotationGestureRecognizer id="mFU-vz-nUd"/>
